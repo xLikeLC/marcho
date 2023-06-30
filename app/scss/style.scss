@@ -288,7 +288,7 @@ footer {
     min-height: 635px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 30px;
+    gap: 30px;
   }
   &__item {
     padding-top: 35px;
@@ -340,6 +340,136 @@ footer {
     color: $title;
     @extend %roboto-400;
     transition: all 0.3s;
+  }
+}
+
+.video-fashion {
+  background-color: $bg;
+  background-image: url("../images/decor/patern.svg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 125px 0;
+  &__inner {
+    display: flex;
+  }
+  &__popup {
+    margin-right: 65px;
+    max-width: 535px;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  &__content {
+    max-width: 570px;
+  }
+  &__subtitle {
+    padding-top: 75px;
+    font-size: 22px;
+    color: $accent;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  &__title {
+    text-align: left;
+  }
+  &__text {
+    margin-bottom: 55px;
+  }
+  &__link {
+    @extend %btn;
+  }
+}
+
+.product {
+  padding: 105px 0 112px;
+  &__items {
+  }
+}
+
+.product-item {
+  max-width: 370px;
+  text-align: center;
+  transition: all 0.3s;
+
+  &__img-box {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+  }
+  &__link-box {
+    position: absolute;
+    left: 0;
+    right: 0%;
+    border-bottom: 50px;
+    background-color: #fff;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
+    border-radius: 22px;
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(300%);
+  }
+
+  &__link--line:before,
+  &__link--line::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 1px;
+    height: 30px;
+    background-color: #ececec;
+    top: 10px;
+  }
+  &__link--line:before {
+    left: 70px;
+  }
+  &__link--line::after {
+    right: 70px;
+  }
+
+  &__link {
+    display: inherit;
+    path {
+      transition: all 0.3s;
+    }
+  }
+
+  &__link:hover {
+    path {
+      fill: $accent;
+    }
+  }
+
+  &__images {
+    object-fit: cover;
+  }
+  &:hover {
+    .product-item__link-box {
+      transform: translateY(0);
+    }
+  }
+  &__title {
+    color: $title;
+    padding: 15px 0 20px;
+    font-size: 22px;
+  }
+  &__price {
+    display: flex;
+    justify-content: center;
+  }
+  &__price-new {
+    padding: 0 12px;
+  }
+  &__price-old {
+    padding: 0 12px;
   }
 }
 
